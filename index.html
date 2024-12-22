@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wedding Photography Portfolio by Yog">
+    <title>Yog Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="portfolio.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+ <!-- Header Section -->
+<header class="hero">
+    <div class="container">
+        <h1 class="title">Yog Photography</h1>
+        <p class="tagline">Capturing Moments, Creating Memories</p>
+        <div class="button-group">
+            <a href="#portfolio" class="btn">View Portfolio</a>
+            <a href="#about" class="btn">About Us</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </div>
+</header>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <img src="https://imgv3.fotor.com/images/blog-cover-image/a-shadow-of-a-boy-carrying-the-camera-with-red-sky-behind.jpg" alt="Yog Photography Team" class="about-photo">
+            <div class="about-text">
+                <p>
+                    Welcome to <strong>Yog Photography</strong> – a team of passionate and dedicated photographers who specialize in capturing the essence of your most cherished moments. Our mission is to create timeless memories that you'll treasure forever.
+                </p>
+                <p>
+                    We believe in delivering high-quality work with a personal touch. Our team is committed to excellence, and we take pride in every project, ensuring your special moments are captured with the utmost care.
+                </p>
+                <h3 color>Meet the Team</h3>
+                
+                <ul class="team-list">
+                    <li><strong>Yog</strong> - Founder </li>
+                    <li><strong>Pranay Ghagre</strong> - Photographer & Videographer</li>
+                    <li><strong>Harsh Pardhi</strong> - Photographer</li>
+                    <li><strong>Aryan Sonewane</strong> - Photographer & Videographer</li>
+                    <li><strong>Arun Patle</strong> Eexperienced Photographer</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>I'd love to hear from you! Feel free to reach out with any questions, inquiries, or just to say hello.</p>
+        <div class="contact-details">
+            <p><strong>Instagram:</strong> <a href="https://instagram.com/yog.photography7" target="_blank">@yog.photography7</a></p>
+            <p><strong>Email:</strong> <a href="mailto:yogphotography07@gmail.com">yogphotography07@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/7218512969" target="_blank">+91 7218512969</a></p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Our Portfolio</h2>
+        <p>Check out my latest work on Instagram!</p>
+
+        <div id="instagram-feed"></div>
+
+        <p>
+            <a href="https://www.instagram.com/yog.photography7/" target="_blank" class="btn">Visit Instagram Profile</a>
+        </p>
+    </section>
+
+    <script>
+        // Instagram Access Token
+        const accessToken = 'IGAAPrVYTikoRBZAE8wRXozTWtEVlZAFRTRyWVVJdkpCZAVNGMEtNQjh5ZAlVaUEhReDZAWcVZAOX2IwVHdaaHJaMmE0M0c3bzdpUkpsUUpMcWxtSlU1cGFZAOUIyRFRPYWhoUE1UZAXNVWEdIeDVpb29YZATJpdXFORXo2N2E2Sl82VUVXcwZDZD'; // Replace with your actual token
+
+        // API endpoint to get media
+        const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${accessToken}`;
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Yog Photography. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

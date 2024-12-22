@@ -1,0 +1,315 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    color: #333;
+}
+
+h1, h2, {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+}
+
+h3 {
+    color: #5c6bc0; /* Replace with your desired color */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-color: rgb(67, 55, 40);
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero .tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-group .btn {
+    padding: 12px 30px;
+    background-color: #5c6bc0;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-group .btn:hover {
+    background-color: #3f51b5;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#portfolio p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #5c6bc0;
+    margin-bottom: 30px;
+}
+
+#instagram-feed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.instagram-post {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.instagram-post:hover {
+    transform: scale(1.05);
+}
+
+.instagram-post img,
+.instagram-post video {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.caption:hover {
+    max-height: none;
+    white-space: normal;
+}
+
+#portfolio .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #5c6bc0;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#portfolio .btn:hover {
+    background-color: #3f51b5;
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-color: #f4f7fb;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.about-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #5c6bc0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    max-width: 700px;
+    color: #333;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.team-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-list li {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.contact-details {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.contact-details a {
+    color: #5c6bc0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.footer {
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero .title {
+        font-size: 2.5rem;
+    }
+
+    .hero .tagline {
+        font-size: 1.2rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #portfolio .btn {
+        font-size: 0.9rem;
+    }
+
+    #instagram-feed {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .contact-details {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero .title {
+        font-size: 2rem;
+    }
+
+    .hero .tagline {
+        font-size: 1rem;
+    }
+
+    #portfolio h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .team-list li {
+        font-size: 1rem;
+    }
+
+    .contact-details {
+        font-size: 1rem;
+    }
+}
