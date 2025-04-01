@@ -3,89 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wedding Photography Portfolio by Yog">
-    <title>Yog Photography</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Yog Photography - Premier wedding photography in Zeta. Capturing timeless moments with expertise and passion.">
+    <meta name="keywords" content="Yog Photography, wedding photography, Zeta, professional photographer, timeless moments, creative shots">
+    <meta name="author" content="Yog Photography Crew">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Yog Photography | Premier Wedding Photography in Zeta">
+    <meta property="og:description" content="Capturing timeless moments with expertise and passion.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:type" content="website">
+    <title>Yog Photography | Premier Wedding Photography in Zeta</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js" defer></script>
     <script src="portfolio.js" defer></script>
 </head>
-<body>
-    <!-- Header Section -->
- <!-- Header Section -->
-<header class="hero">
-    <div class="container">
-        <h1 class="title">Yog Photography</h1>
-        <p class="tagline">Capturing Moments, Creating Memories</p>
-        <div class="button-group">
-            <a href="#portfolio" class="btn">View Portfolio</a>
-            <a href="#about" class="btn">About Us</a>
-            <a href="#contact" class="btn">Contact Me</a>
-        </div>
+<body class="dark-mode"> <!-- Changed from light-mode to dark-mode -->
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div class="shutter"></div>
     </div>
-</header>
 
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle between dark and light mode">☀️</button> <!-- Default icon changed to sun -->
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <img src="https://imgv3.fotor.com/images/blog-cover-image/a-shadow-of-a-boy-carrying-the-camera-with-red-sky-behind.jpg" alt="Yog Photography Team" class="about-photo">
-            <div class="about-text">
-                <p>
-                    Welcome to <strong>Yog Photography</strong> – a team of passionate and dedicated photographers who specialize in capturing the essence of your most cherished moments. Our mission is to create timeless memories that you'll treasure forever.
-                </p>
-                <p>
-                    We believe in delivering high-quality work with a personal touch. Our team is committed to excellence, and we take pride in every project, ensuring your special moments are captured with the utmost care.
-                </p>
-                <h3 color>Meet the Team</h3>
-                
-                <ul class="team-list">
-                    <li><strong>Yog</strong> - Founder </li>
-                    <li><strong>Pranay Ghagre</strong> - Photographer & Videographer</li>
-                    <li><strong>Harsh Pardhi</strong> - Photographer</li>
-                    <li><strong>Aryan Sonewane</strong> - Photographer & Videographer</li>
-                    <li><strong>Arun Patle</strong> Eexperienced Photographer</li>
-                </ul>
-            </div>
+    <!-- Audio -->
+    <audio id="shutter-sound" src="https://www.soundjay.com/buttons/camera-shutter-click-01.mp3" preload="auto"></audio>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav" role="navigation">
+        <div class="container">
+            <a href="#portfolio" class="btn" data-hover="Portfolio">Portfolio</a>
+            <a href="#contact" class="btn" data-hover="Contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" role="banner">
+        <video autoplay muted loop class="hero-video" aria-hidden="true">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-wedding-couple-kissing-43966-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="hero-title" data-text="Yog Photography">Yog Photography</h1>
+            <p class="hero-tagline">Timeless Moments, Masterfully Captured</p>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro" data-animate>
+        <div class="container">
+            <h2 class="section-title">About Yog Photography</h2>
+            <p class="intro-text">
+                Welcome to <strong>Yog Photography</strong>, Yog’s premier wedding photography service. We specialize in capturing your most cherished moments with creativity, precision, and passion.
+            </p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>I'd love to hear from you! Feel free to reach out with any questions, inquiries, or just to say hello.</p>
-        <div class="contact-details">
-            <p><strong>Instagram:</strong> <a href="https://instagram.com/yog.photography7" target="_blank">@yog.photography7</a></p>
-            <p><strong>Email:</strong> <a href="mailto:yogphotography07@gmail.com">yogphotography07@gmail.com</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/7218512969" target="_blank">+91 7218512969</a></p>
+    <!-- Stats Section -->
+    <section class="stats" data-animate>
+        <div class="container">
+            <div class="stat-item"><span class="stat-number" data-target="60">0</span>+<br>Weddings Captured</div>
+            <div class="stat-item"><span class="stat-number" data-target="60000">0</span>+<br>Photos Delivered</div>
+            <div class="stat-item"><span class="stat-number" data-target="04">0</span>+<br>Years of Excellence</div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <h2>Our Portfolio</h2>
-        <p>Check out my latest work on Instagram!</p>
-
-        <div id="instagram-feed"></div>
-
-        <p>
-            <a href="https://www.instagram.com/yog.photography7/" target="_blank" class="btn">Visit Instagram Profile</a>
-        </p>
+    <section id="portfolio" class="portfolio" data-animate>
+        <div class="container">
+            <h2 class="section-title">Our Portfolio</h2>
+            <p class="portfolio-text">Explore our latest work – a showcase of creativity and emotion.</p>
+            <div id="gallery-3d"></div>
+            <a href="https://www.instagram.com/yog.photography7/" target="_blank" class="btn" rel="noopener noreferrer" data-hover="Instagram">Visit Instagram</a>
+        </div>
     </section>
 
-    <script>
-        // Instagram Access Token
-        const accessToken = 'IGAAPrVYTikoRBZAE8wRXozTWtEVlZAFRTRyWVVJdkpCZAVNGMEtNQjh5ZAlVaUEhReDZAWcVZAOX2IwVHdaaHJaMmE0M0c3bzdpUkpsUUpMcWxtSlU1cGFZAOUIyRFRPYWhoUE1UZAXNVWEdIeDVpb29YZATJpdXFORXo2N2E2Sl82VUVXcwZDZD'; // Replace with your actual token
+    <!-- Team Section -->
+    <section class="team" data-animate>
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <article class="team-card" data-hologram="yog"><h3>Yog</h3><p>Founder & Lead Photographer</p></article>
+                <article class="team-card" data-hologram="pranay"><h3>Pranay Ghagre</h3><p>Photographer & Videographer</p></article>
+                <article class="team-card" data-hologram="harsh"><h3>Harsh Pardhi</h3><p>Photographer</p></article>
+                <article class="team-card" data-hologram="aryan"><h3>Aryan Sonewane</h3><p>Photographer & Videographer</p></article>
+                <article class="team-card" data-hologram="arun"><h3>Arun Patle</h3><p>Experienced Photographer</p></article>
+            </div>
+        </div>
+    </section>
 
-        // API endpoint to get media
-        const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${accessToken}`;
-    </script>
+    <!-- Testimonials Section -->
+    <section class="testimonials" data-animate>
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonial-slider">
+                <blockquote class="testimonial-item">"Yog Photography made our wedding unforgettable!" - Priya</blockquote>
+                <blockquote class="testimonial-item">"Exceptional quality and creativity!" - Rohan</blockquote>
+                <blockquote class="testimonial-item">"Every shot is a masterpiece!" - Sneha</blockquote>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2024 Yog Photography. All rights reserved.</p>
+    <!-- Booking Section -->
+    <section class="booking" data-animate>
+        <div class="container">
+            <h2 class="section-title">Book Your Session</h2>
+            <form id="booking-form" novalidate>
+                <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" autocomplete="name">
+                <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone Number" pattern="[0-9]{10}" autocomplete="tel">
+                <input type="date" name="date" required aria-label="Preferred Date" min="2025-04-01">
+                <button type="submit" class="btn" data-hover="Book">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" data-animate>
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="contact-text">Ready to capture your moments? Reach out today!</p>
+            <div class="contact-links">
+                <a href="https://instagram.com/yog.photography7" target="_blank" rel="noopener noreferrer" class="contact-link">Instagram: @yog.photography7</a>
+                <a href="mailto:yogphotography07@gmail.com" class="contact-link">Email: yogphotography07@gmail.com</a>
+                <a href="https://wa.me/7218512969" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp: +91 7218512969</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Portal -->
+    <section class="client-portal" data-animate>
+        <div class="container">
+            <h2 class="section-title">Client Portal</h2>
+            <p>Access your photos with your unique password.</p>
+            <input type="password" id="portal-pass" placeholder="Enter Password" aria-label="Password" required>
+            <button class="btn" id="portal-login" data-hover="Login">Login</button>
+            <div id="portal-content" style="display:none;">Download your photos: <a href="#" target="_blank">Click Here</a></div>
+        </div>
+    </section>
+
+    <!-- Live Chat -->
+    <a href="https://wa.me/7218512969?text=Hi%20Yog,%20I%20want%20to%20book%20a%20shoot!" target="_blank" class="live-chat" aria-label="Chat on WhatsApp">💬</a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to Top">⬆️</button>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>© 2025 Yog Photography – Premier Wedding Photography. All Rights Reserved.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
